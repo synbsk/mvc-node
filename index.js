@@ -1,4 +1,8 @@
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 4111;
-app.listen(PORT, console.log("Server don start for port: " + PORT))
+const express = require("express")
+var app = express()
+app.get("/", function (request, response) {
+    response.send("Hello World!")
+})
+app.listen(8080, function () {
+    console.log("Started application on port %d", 8080)
+});
